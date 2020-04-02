@@ -43,3 +43,21 @@ config.jsonSchema //控制台下发的json schema字符串
 config.jsonTemplate //控制台下发的模板字符串
 config.faultTolerant //校验容错
 ```
+
+#### 配置规则：
+
+##### config.queryPattern和config.headPattern
+queryPattern和headPattern的规则由三部分组成，用分号隔开，分别是query(或head)的参数名，json绝对路径，数据类型，格式如下：
+
+```
+a.N.N;data.search_data[].elements[].rating;0
+```
+1. a.N.N： 实际情况下为a.1.1,a.1.2,a.2.1,a.2.2 等 (N的位置为具体的数字，表示json路径中[]内的值，即array层的位置)
+2. data.search_data[].elements[].rating:  json路径的例子
+3. 数据类型:  0:string1:number2:integer3:boolean6:null7:any
+
+##### config.jsonSchema
+这个配置项存放json schema字符串。
+
+##### config.jsonTemplate
+这个配置项存放模板字符串。
