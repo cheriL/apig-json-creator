@@ -4,9 +4,7 @@
 ## 功能
 
 ### json生成
-```
 代码暴力转换实现，仅支持一维json的生成，即array与object相互嵌套格式的json
-```
 
 ### json校验
 json校验功能是使用jsonschema对请求的body体（目前仅支持‘application/json’）进行校验，如果不匹配会返回415的错误
